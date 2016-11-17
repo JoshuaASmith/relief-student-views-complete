@@ -1,7 +1,4 @@
 const React = require('react')
-//const PouchDB = require('pouchdb-http')
-// const dbURL = process.env.REACT_APP_DB
-// const db = PouchDB(dbURL)
 const xhr = require('xhr')
 
 const ResourceForm = React.createClass({
@@ -63,20 +60,20 @@ const ResourceForm = React.createClass({
             <div className="pa4 avenir">
                 <form className="pa2" onSubmit={this.handleSubmit}>
                     <div className="pb3">
-                        <label className="db fw4 lh-copy f6">First Name</label>
-                        <input className="pa2 input-reset ba bg-transparent w-100 measure" onChange={this.handleChange('firstName')} value={this.state.person.firstName}/>
+                        <label className="db fw4 lh-copy f6">First Name:</label>
+                        <input className="pa2 input-reset ba bg-transparent w-100 measure" placeholder="First Name" onChange={this.handleChange('firstName')} value={this.state.person.firstName}/>
                     </div>
                     <div className="pb3">
                         <label className="db fw4 lh-copy f6">Last Name</label>
-                        <input className="pa2 input-reset ba bg-transparent w-100 measure" onChange={this.handleChange('lastName')} value={this.state.person.lastName}/>
+                        <input className="pa2 input-reset ba bg-transparent w-100 measure" placeholder="Last Name" onChange={this.handleChange('lastName')} value={this.state.person.lastName}/>
                     </div>
                     <div className="pb3">
                         <label className="db fw4 lh-copy f6">Phone Number</label>
-                        <input className="pa2 input-reset ba bg-transparent w-100 measure" onChange={this.handleChange('phone')} value={this.state.person.phone}/>
+                        <input className="pa2 input-reset ba bg-transparent w-100 measure" placeholder="(555)-555-5555" onChange={this.handleChange('phone')} value={this.state.person.phone}/>
                     </div>
                     <div className="pb3">
                         <label className="db fw4 lh-copy f6">Email Address</label>
-                        <input className="pa2 input-reset ba bg-transparent w-100 measure" onChange={this.handleChange('email')} value={this.state.person.email}/>
+                        <input className="pa2 input-reset ba bg-transparent w-100 measure" placeholder="input@example.com" onChange={this.handleChange('email')} value={this.state.person.email}/>
                     </div>
                     <div className="pa2">
                         <button className="pt2 f6 link dim br-pill ph3 pv2 mb2 dib light-silver bg-black mh5">Add Person</button>
